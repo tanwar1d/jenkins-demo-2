@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'javac Main.java'
+                bat 'echo Building...'
             }
         }
 
-        stage('Run') {
+        stage('Force Fail') {
             steps {
-                bat 'java Main'
+                bat 'exit 1'
             }
         }
     }
